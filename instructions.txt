@@ -1,0 +1,8 @@
+Open your terminal and navigate to it.
+Download/Clone the sample template at: https://github.com/rasi10/test-project-jest-puppeteer.git
+Navigate into the project: cd test-project-jest-puppeteer
+Run the command: npm install --save-dev jest puppeteer
+Run the command: npm test
+
+
+
