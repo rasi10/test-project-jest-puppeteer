@@ -1,3 +1,9 @@
+const {checkTitle} = require('./index');
+
+// If you want to import all the functions from a file
+//const funcs = require('./index');
+//if you import as funcs, you call the function as -> funcs.function();
+
 const puppeteer = require('puppeteer');
 
 
@@ -15,12 +21,13 @@ afterEach (() => {
   })
 
 test('Title == Google', async () => {
-    await page.goto(url);
-    const title = await page.title();
+    const title = await checkTitle("http://www.google.com", page);
     expect(title).toBe("Google");
+    
   });
 
 test('Location == https://www.google.com', async () => {
+    //funcs.foo();
     await page.goto(url);
     const location = await page.url();
     expect(location).toBe("https://www.google.com/");
